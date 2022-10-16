@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Candidates</title>
+</head>
+<body>
+<p><h1>Все кандидаты</h1></p>
+{% if candidates|length > 0 %}
+    {% for candidate in candidates %}
+        <p><h2><a href="/candidate/{{candidate.id}}">{{candidate.name}}</a></h2></p>
+    {% endfor %}
+{% else %}
+    <p><h2>Список кандидатов пуст</h2></p>
+{% endif %}
+</body>
+</html>
